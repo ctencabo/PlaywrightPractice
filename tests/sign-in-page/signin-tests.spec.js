@@ -6,7 +6,7 @@ const SigninTestData = require('../../test_data/sign_in_page/signinTestData');
 const InventoryTestData = require('../../test_data/inventory_page/inventoryTestData');
 
 test.beforeEach('Navigate to Landing Page', async ({ page }) => {
-  await page.goto('https://www.saucedemo.com/');
+  await page.goto('https://www.saucedemo.com/', { waitUntil: 'domcontentloaded' });
 });
 
 test('Sign In - Happy Flow', async ({ page }) => {
